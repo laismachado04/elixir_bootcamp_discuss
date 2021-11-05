@@ -34,3 +34,17 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+.invalid-feedback {
+  color: red;
+  text-transform: capitalize;
+  position: absolute;
+  top: 37px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+.container {
+  position: relative;
+  top: 37px;
+}
