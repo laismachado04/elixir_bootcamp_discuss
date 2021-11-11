@@ -5,6 +5,8 @@ defmodule DiscussWeb.TopicController do
   alias Discuss.Discussions.Topic
 
   def index(conn, _params) do
+    # Show in the log user information
+    # IO.inspect(conn.assigns)
     topics = Discussions.list_topics()
     render(conn, "index.html", topics: topics)
   end
