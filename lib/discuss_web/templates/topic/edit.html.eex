@@ -1,5 +1,8 @@
-<h1>Edit Topic</h1>
+<%= form_for @changeset, Routes.topic_path(@conn, :update, @topic), fn f ->  %>
+    <div class="form-group">
+        <%= text_input f, :title, placeholder: "Title", class: "form-contorl" %>
+        <%= error_tag f, :title %>
+    </div>
 
-<%= render "form.html", Map.put(assigns, :action, Routes.topic_path(@conn, :update, @topic)) %>
-
-<span><%= link "Back", to: Routes.topic_path(@conn, :index) %></span>
+    <%= submit "Save Topic", class: "btn btn-primary" %>
+<% end %>

@@ -101,4 +101,9 @@ defmodule Discuss.Accounts do
   def change_user(%User{} = user, attrs \\ %{}) do
     User.changeset(user, attrs)
   end
+
+  def get_by(email) do
+    Repo.get_by(User, email: email)
+  end
+
 end

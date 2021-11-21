@@ -29,3 +29,13 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
+
+#Ueberauth configs
+config :ueberauth, Ueberauth,
+  providers: [
+    github: {Ueberauth.Strategy.Github, [default_scope: "user,public_repo,notifications"]}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+client_id: "8d25241fbe5069a6c7b4",
+client_secret: "463ca201661f786235670f52ba57feda175dba77"
