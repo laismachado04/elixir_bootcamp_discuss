@@ -25,6 +25,7 @@ defmodule DiscussWeb.Router do
     # put "/topics/:id", TopicController, :update
     # get "/topics/:id", TopicController, :show
     resources "/", TopicController
+    resources "/", CommentController
   end
 
   scope "/auth", DiscussWeb do

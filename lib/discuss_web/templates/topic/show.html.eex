@@ -1,10 +1,19 @@
-<h1>Show Topic</h1>
-
+<h5><%= @topic.title %></h5>
 <ul>
 
+<div class="input-field">
+  <textarea class="materialize-textarea"></textarea>
+  <button class="btn">Add Comment</button>
+  <ul class="collection">
+  </ul>
+</div>
+
   <li>
-    <strong>Title:</strong>
-    <%= @topic.title %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        window.createSocket(<%= @topic.id %>)
+      })
+    </script>
   </li>
 
 </ul>
